@@ -1,0 +1,58 @@
+.scrollable {
+    position: relative;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-padding-top: 1.5rem;
+    &:hover {}
+}
+
+.border {
+    &-lg {
+        &-off {
+            @include media-breakpoint-down(lg) {
+                border: unset !important;
+            }
+        }
+    }
+}
+
+@each $label,
+$value in $spacers {
+    .gap-#{$label} {
+        display: flex;
+        gap: #{$value};
+        &-vertical {
+            display: flex;
+            gap: #{$value};
+            flex-direction: column;
+        }
+        &-row {
+            row-gap: #{$value};
+        }
+    }
+    .rounded-#{$label} {
+        border-radius: #{$value} !important;
+    }
+}
+
+@each $label,
+$value in $shadow {
+    .shadow-#{$label} {
+        box-shadow: #{$value};
+    }
+}
+
+.z {
+    @for $i from 1 through 5 {
+        &-#{$i} {
+            z-index: $i;
+        }
+        &-n#{$i} {
+            z-index: -$i;
+        }
+    }
+}
+
+.position-unset {
+    position: unset !important;
+}

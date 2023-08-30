@@ -1,0 +1,13 @@
+.footer{
+    .heading{
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background: $white;
+             bottom: 0;
+        }
+    }
+}

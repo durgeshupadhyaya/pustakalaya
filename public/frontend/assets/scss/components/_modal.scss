@@ -1,0 +1,150 @@
+.modal {
+  &-title {
+    @include rfs(16px);
+    color: $navy-40;
+    font-weight: 600;
+  }
+  &-footer {
+    border-top: 1px solid $gray-10;
+  }
+  &-dialog {
+    &-scrollable {
+      .modal-body {
+        @include scrollable;
+      }
+    }
+  }
+  &-header {
+    // background-color: $blue-100;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid $gray-10;
+    .nav-link {
+      padding: 0;
+    }
+    .close {
+      border: none;
+      background: transparent;
+    }
+  }
+  .ic-close {
+    font-size: 10px;
+  }
+  &-overlay {
+    .modal-dialog {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      right: calc(-1 * var(--modal-overlay-size));
+      height: 100%;
+      margin: 0;
+      width: var(--modal-overlay-size);
+      transition: all 0.3s ease-in-out;
+      @include media-breakpoint-down(xs) {
+        max-height: 600px;
+        width: 100%;
+        bottom: 0;
+        margin-top: auto;
+        height: auto;
+      }
+    }
+    &.show {
+      .modal-dialog {
+        right: 0;
+      }
+    }
+
+    .modal-content {
+      height: 100%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .modal-body {
+      overflow-y: auto;
+      @include scrollable;
+      @include media-breakpoint-down(xs) {
+        height: calc(100% - 7rem - 1rem);
+        overflow: auto;
+        flex: none;
+      }
+    }
+  }
+  &-confirm {
+    max-width: 450px;
+
+    .icon {
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin: auto;
+      margin-bottom: 1rem;
+
+      [class^="ic-"],
+      [class*=" ic-"] {
+        color: white;
+      }
+    }
+    .modal {
+      &-header,
+      &-footer {
+        border: none;
+      }
+    }
+    &.danger {
+      .modal-header {
+        background-color: #f9e9e8;
+        color: $danger;
+        .modal-title {
+          color: $danger;
+        }
+        .icon {
+          background-color: $danger;
+        }
+      }
+    }
+    &.success {
+      .modal-header {
+        background-color: #e9f6ea;
+      }
+      .modal-title {
+        color: $success;
+      }
+      .icon {
+        background-color: $success;
+      }
+    }
+    &.primary {
+      .modal-header {
+        // background-color: $blue-7;
+      }
+      .modal-title {
+        color: $primary;
+      }
+      .icon {
+        background-color: $primary;
+      }
+    }
+
+    .modal {
+      &-header {
+        justify-content: center;
+        padding: 1.5rem;
+        display: block;
+        text-align: center;
+      }
+      &-footer {
+        padding-bottom: 1.5rem;
+      }
+      &-body {
+        background-color: white;
+        padding: 2.5rem 2.5rem 1rem 2.5rem;
+        text-align: center;
+      }
+    }
+  }
+
+
+}

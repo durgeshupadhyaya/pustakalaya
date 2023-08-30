@@ -1,0 +1,46 @@
+.pagination{
+    align-items: center;
+    &-wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding: .75rem;
+        background-color: white;
+        border: 1px solid $gray-80;
+        border-top: none;
+        border-bottom-left-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+    }
+    &-01{
+        .page{
+            &-item{
+                &.active{
+                    .page-link{
+                        &:hover{
+                            color: white;
+                        }
+                    }
+                }
+            }
+            &-link{
+                border: none;
+                background: transparent;
+                border-radius: .125rem;
+                padding: .125rem .5rem;
+                @include rfs(14px);
+                &:hover{
+                    color: $primary;
+                }
+                [class^="ic-"], [class*=" ic-"],svg {
+                    color: $gray-56;
+                    @include rfs(12px);
+                }
+                &.prev,&.next{
+                    padding: .125rem .5rem;
+                    [class^="ic-"], [class*=" ic-"],svg {
+                    font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

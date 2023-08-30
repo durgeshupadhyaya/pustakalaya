@@ -1,0 +1,15 @@
+.emptyState {
+  background: $white;
+  padding: 1rem;
+  text-align: center;
+  & > [class*="ic-"] {
+    font-size: 2rem;
+    color: $cool-gray-600;
+  }
+  &-title {
+    color: $cool-gray-800;
+  }
+  &-desc {
+    color: $cool-gray-600;
+  }
+}

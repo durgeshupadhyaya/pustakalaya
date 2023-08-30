@@ -1,0 +1,105 @@
+.breadcrumb {
+  &-main {
+    @include flex(center);
+    gap: 0.5rem;
+    &-item {
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: $cool-gray-600;
+      @include flex(center);
+      gap: 0.5rem;
+      &:not(:last-child) {
+        &::after {
+          content: "/";
+          font-family: "icomoon";
+        }
+      }
+      &:last-child {
+        .breadcrumb-main-link {
+          color: $primary;
+        }
+      }
+    }
+    &.underline {
+      .breadcrumb-main-item {
+        &:not(:last-child) {
+          .breadcrumb-main-link {
+            text-decoration: underline;
+          }
+        }
+        &:last-child {
+          .breadcrumb-main-link {
+            color: $gray-300;
+          }
+        }
+      }
+    }
+    &.dotted {
+      .breadcrumb-main-item {
+        &:not(:last-child) {
+          &::after {
+            content: "\e91c";
+            font-size: 4px;
+          }
+        }
+      }
+    }
+    &.slash {
+      .breadcrumb-main-item {
+        &:not(:last-child) {
+          &::after {
+            content: "/";
+          }
+        }
+      }
+    }
+    &.arrow {
+      background-color: $white;
+      padding-left: 0.75rem;
+      .breadcrumb-main-item {
+        padding-right: 0.75rem;
+        &:not(:last-child) {
+          &::after {
+            content: none;
+          }
+        }
+        &:last-child {
+          background-color: $primary;
+          padding-right: 0;
+          padding: 4px 8px 4px 28px;
+          text-align: center;
+          position: relative;
+          a {
+            color: white;
+          }
+          &::after {
+            top: 1px;
+            content: "";
+            position: absolute;
+            left: 123px;
+            border-top-right-radius: 32px;
+            width: 0;
+            border-radius: -6px;
+            height: 0;
+            border-top: 14px solid transparent;
+            border-left: 20px solid $primary;
+            border-bottom: 14px solid transparent;
+          }
+          &::before {
+            top: 1px;
+            content: "";
+            position: absolute;
+            left: 0px;
+            border-top-right-radius: 32px;
+            width: 0;
+            border-radius: -6px;
+            height: 0;
+            border-top: 14px solid transparent;
+            border-left: 20px solid $white;
+            border-bottom: 14px solid transparent;
+          }
+        }
+      }
+    }
+  }
+}

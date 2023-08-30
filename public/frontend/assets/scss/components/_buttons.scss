@@ -1,0 +1,362 @@
+// !🔥 Variables
+// *👉 Global
+$btn-lh: $input-lh;
+$btn-fw: $input-fw;
+// *👉 Default
+$btn-py: $input-py;
+$btn-px: $input-px;
+$btn-radius: $input-radius;
+$btn-fs: $input-fs;
+// *👉 Lg-Size
+$btn-py-lg: $input-py-lg;
+$btn-px-lg: $input-px-lg;
+// *👉 Sm-Size
+$btn-py-sm: $input-py-sm;
+$btn-px-sm: $input-px-sm;
+$btn-fs-sm: $input-fs-sm;
+// *👉 Xs-Size
+$btn-py-xs: $input-py-xs;
+$btn-px-xs: $input-px-xs;
+$btn-fs-xs: $input-fs-xs;
+// *👉 Pill-Radius
+$btn-pill-radius: $input-pill-radius;
+// *👉 Sharp-Radius
+$btn-sharp-radius: $input-sharp-radius;
+// *👉 Attributes
+$btn-theme: ("gray", "accent", "primary", "secondary", "white");
+$btn-size: ("lg", "sm", "xs");
+$btn-radius-type: ("pill", "sharp");
+// *👉 Shadow-on-Focus
+$btn-focus-shadow-primary: 0px 0px 0px 4px rgba($primary, 0);
+$btn-focus-shadow-secondary: 0px 0px 0px 4px rgba($secondary, 0);
+$btn-focus-shadow-accent: 0px 0px 0px 4px rgba($accent, 0);
+$btn-focus-shadow-gray: 0px 0px 0px 4px rgba(73, 80, 87, 0);
+$btn-focus-shadow-white: 0px 0px 0px 4px rgba(73, 80, 87, 0);
+// *👉 Shadow-on-Clicked
+$btn-focus-clicked-primary: 0px 2px 8px rgba($primary, 0) inset;
+$btn-focus-clicked-secondary: 0px 2px 8px rgba($secondary, 0) inset;
+$btn-focus-clicked-accent: 0px 2px 8px rgba($accent, 0) inset;
+$btn-focus-clicked-gray: 0px 2px 8px rgba(0, 0, 0, 0) inset;
+$btn-focus-clicked-white: 0px 2px 8px rgba(0, 0, 0, 0) inset;
+
+$hover-background-color: $primary-100;
+// !🔥 Mixins
+
+@mixin btn(
+  $background,
+  $color,
+  $hover-background-color,
+  $hover-color,
+  $focus-color,
+  $focus-shadow,
+  $focus-clicked-shadow
+) {
+  background-color: $background;
+  color: $color;
+  border: 1px solid $background;
+  &:hover {
+    background-color: $primary-100;
+    color: $hover-color;
+  }
+  &:focus-visible {
+    background-color: $background;
+    color: $focus-color;
+    box-shadow: $focus-clicked-shadow;
+  }
+  &:active {
+    background: $background;
+    box-shadow: $focus-shadow;
+  }
+}
+
+@mixin btn-outline(
+  $border-color,
+  $color,
+  $hover-background,
+  $hover-color,
+  $focus-shadow,
+  $focus-clicked-shadow
+) {
+  color: $color;
+  border: 1px solid $border-color;
+  &:hover {
+    background-color: $hover-background;
+    color: $hover-color;
+  }
+  &:focus-visible {
+    box-shadow: $focus-shadow;
+    background-color: $hover-background;
+    color: $hover-color;
+  }
+  &:active {
+    background-color: $hover-background;
+    color: $hover-color;
+    box-shadow: $focus-clicked-shadow;
+  }
+}
+
+@mixin btn-ghost(
+  $color,
+  $hover-background,
+  $focus-shadow,
+  $focus-clicked-background,
+  $focus-clicked-color
+) {
+  color: $color;
+  &:hover {
+    background-color: $hover-background;
+    color: $color;
+  }
+  &:focus-visible {
+    background-color: $hover-background;
+    box-shadow: $focus-shadow;
+  }
+  &:active {
+    background: $focus-clicked-background;
+    color: $focus-clicked-color;
+    box-shadow: unset;
+  }
+}
+
+@mixin btn-circle($px: $btn-px, $py: $btn-py, $fs: $btn-fs) {
+  border-radius: 50%;
+  width: calc($px + $py + ($fs * 1));
+  height: calc($px + $py + ($fs * 1));
+  @include flex(center, center);
+  padding: unset;
+}
+
+// *💠 Default
+button,
+.btn {
+  //   all: unset;
+  background-color: unset;
+  padding: $btn-py $btn-px;
+  border-radius: $btn-radius;
+  font-size: $btn-fs;
+  line-height: $btn-lh;
+  font-weight: $btn-fw;
+  white-space: nowrap;
+  transition: all 0.15s ease-in;
+  display: inline-block;
+  border: unset;
+  &:active,
+  &:focus-visible {
+    outline: 0;
+  }
+  //   box-sizing: border-box;
+}
+
+// *👉 Different-Styles
+@each $label in $btn-theme {
+  .btn-#{$label} {
+    @if $label== "primary" {
+      @include btn(
+        $primary,
+        $white,
+        $primary-600,
+        $white,
+        $white,
+        $btn-focus-clicked-primary,
+        $btn-focus-shadow-primary
+      );
+    } @else if $label== "secondary" {
+      @include btn(
+        $secondary,
+        $white,
+        $secondary-500,
+        $white,
+        $white,
+        $btn-focus-clicked-secondary,
+        $btn-focus-shadow-secondary
+      );
+    } @else if $label== "accent" {
+      @include btn(
+        $accent,
+        $white,
+        $accent-600,
+        $white,
+        $white,
+        $btn-focus-clicked-accent,
+        $btn-focus-shadow-accent
+      );
+    } @else if $label== "gray" {
+      @include btn(
+        $cool-gray-400,
+        $cool-gray-700,
+        $cool-gray-400,
+        $white,
+        $cool-gray-700,
+        $btn-focus-clicked-gray,
+        $btn-focus-shadow-gray
+      );
+    } @else if $label== "white" {
+      @include btn(
+        $white,
+        $primary,
+        $cool-gray-100,
+        $primary,
+        $primary,
+        $btn-focus-clicked-white,
+        $btn-focus-shadow-white
+      );
+    }
+  }
+  .btn-outline-#{$label} {
+    @if $label== "primary" {
+      @include btn-outline(
+        $primary,
+        $primary,
+        $primary,
+        $white,
+        $btn-focus-shadow-primary,
+        $btn-focus-clicked-primary
+      );
+    } @else if $label== "secondary" {
+      @include btn-outline(
+        $secondary,
+        $secondary,
+        $secondary,
+        $white,
+        $btn-focus-shadow-secondary,
+        $btn-focus-clicked-secondary
+      );
+    } @else if $label== "accent" {
+      @include btn-outline(
+        $accent,
+        $accent,
+        $accent,
+        $white,
+        $btn-focus-shadow-accent,
+        $btn-focus-clicked-accent
+      );
+    } @else if $label== "gray" {
+      @include btn-outline(
+        $cool-gray-500,
+        $cool-gray-700,
+        $cool-gray-400,
+        $cool-gray-700,
+        $btn-focus-shadow-gray,
+        $btn-focus-clicked-gray
+      );
+    } @else if $label== "white" {
+      @include btn-outline(
+        $white,
+        $white,
+        $white,
+        $primary,
+        $btn-focus-shadow-white,
+        $btn-focus-clicked-white
+      );
+    }
+  }
+  .btn-ghost-#{$label} {
+    @if $label== "primary" {
+      @include btn-ghost(
+        $primary,
+        $primary-100,
+        $btn-focus-shadow-primary,
+        $primary-100,
+        $primary
+      );
+    } @else if $label== "secondary" {
+      @include btn-ghost(
+        $secondary,
+        $secondary-100,
+        $btn-focus-shadow-secondary,
+        $secondary-100,
+        $secondary
+      );
+    } @else if $label== "accent" {
+      @include btn-ghost(
+        $accent,
+        $accent-100,
+        $btn-focus-shadow-accent,
+        $accent-100,
+        $accent
+      );
+    } @else if $label== "gray" {
+      @include btn-ghost(
+        $cool-gray-700,
+        $cool-gray-400,
+        $btn-focus-shadow-gray,
+        $cool-gray-400,
+        $cool-gray-700
+      );
+    } @else if $label== "white" {
+      @include btn-ghost(
+        $primary,
+        $white,
+        $btn-focus-shadow-white,
+        $white,
+        $primary
+      );
+    }
+  }
+}
+
+@each $label in $btn-size {
+  .btn-#{$label} {
+    @if $label== "lg" {
+      padding: $btn-py-lg $btn-px-lg;
+    } @else if $label== "sm" {
+      padding: $btn-py-sm $btn-px-sm;
+      font-size: $btn-fs-sm;
+    } @else if $label== "xs" {
+      padding: $btn-py-xs $btn-px-xs;
+      font-size: $btn-fs-xs;
+    }
+  }
+}
+
+@each $label in $btn-radius-type {
+  .btn-#{$label} {
+    @if $label== "pill" {
+      border-radius: $btn-pill-radius;
+    } @else if $label== "sharp" {
+      border-radius: $btn-sharp-radius;
+    }
+  }
+}
+
+.btn {
+  &-icon {
+    &-only {
+      padding: 2px;
+      font-size: $btn-fs;
+      outline: unset !important;
+      border: unset;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  &-circle {
+    @include btn-circle();
+    @each $label in $btn-size {
+      &-#{$label} {
+        @if $label== "lg" {
+          @include btn-circle($btn-px-lg, $btn-py-lg);
+        } @else if $label== "sm" {
+          @include btn-circle($btn-px-sm, $btn-py-sm, $btn-fs-sm);
+        } @else if $label== "xs" {
+          @include btn-circle($btn-px-xs, $btn-py-xs, $btn-fs-xs);
+        }
+      }
+    }
+  }
+  &-shadow {
+    @extend .shadow-1;
+  }
+}
+
+// !🚨 HTML-Attribute-Styles
+button {
+  &:disabled {
+    cursor: not-allowed;
+  }
+  &:has(i) {
+    display: inline-flex;
+    align-items: center;
+  }
+}

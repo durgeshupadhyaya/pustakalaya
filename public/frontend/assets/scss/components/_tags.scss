@@ -1,0 +1,31 @@
+.tag {
+  @extend .badge;
+  color: $cool-gray-700;
+  &.filled {
+    background-color: $cool-gray-200;
+    &:hover,
+    &:focus {
+      background-color: $cool-gray-400;
+    }
+  }
+  &.outline {
+    border: 1px solid $cool-gray-300;
+    &:hover,
+    &:focus {
+      border: 1px solid $cool-gray-600;
+    }
+  }
+  i {
+    font-size: 0.75rem;
+    vertical-align: middle;
+    &.close {
+      margin-left: 0.25rem;
+      display: none;
+    }
+  }
+  &:hover {
+    .close {
+      display: unset;
+    }
+  }
+}

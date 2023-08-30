@@ -1,0 +1,20 @@
+.circle {
+    @include shape(circle, 3rem);
+    &-sm {
+        @include shape(circle, 2.5rem);
+    }
+    &-xs {
+        @include shape(circle, 2rem);
+    }
+    &-lg {
+        @include shape(circle, 9.125rem, 9.125rem);
+    }
+}
+
+.square {
+    @include shape(square, 3rem);
+    &-rounded {
+        @include shape(square, 3rem);
+        border-radius: 0.5rem;
+    }
+}

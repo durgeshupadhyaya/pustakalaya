@@ -1,0 +1,176 @@
+$form-check-label-size: 0.875rem;
+$form-check-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04),
+  0px 1px 2px rgba(0, 0, 0, 0.08);
+// !🔥 Variables
+// *👉 Global
+$form-lh: $input-lh;
+$form-fw: $input-fw;
+$form-border: $cool-gray-500;
+$form-bg: $white;
+$form-color: $cool-gray-800;
+$form-disabled-bg: $cool-gray-300;
+$input-extra-height: 2px;
+// *👉 Default
+$form-py: $input-py;
+$form-px: $input-px;
+$form-radius: $input-radius;
+$form-fs: $input-fs;
+// *👉 Lg-Size
+$form-py-lg: $input-py-lg;
+$form-px-lg: $input-px-lg;
+// *👉 Sm-Size
+$form-py-sm: $input-py-sm;
+$form-px-sm: $input-px-sm;
+$form-fs-sm: $input-fs-sm;
+// *👉 Xs-Size
+$form-py-xs: $input-py-xs;
+$form-px-xs: $input-px-xs;
+$form-fs-xs: $input-fs-xs;
+// *👉 Pill-Radius
+$form-pill-radius: $input-pill-radius;
+// *👉 Sharp-Radius
+$form-sharp-radius: $input-sharp-radius;
+// *👉 Attributes
+$form-size: ("lg", "sm", "xs");
+$form-radius-type: ("pill", "sharp");
+// *👉 Shadow-on-Clicked
+$form-focus-shadow: 0px 0px 0px 4px rgba($primary, 0.35);
+// *💠 Default
+input,
+select,
+textarea {
+  //   all: unset;
+  width: 100%;
+  // padding: $form-py $form-px;
+  border: 1px solid $form-border;
+  border-radius: $form-radius;
+  font-size: $form-fs;
+  line-height: $form-lh;
+  font-weight: $form-fw;
+  transition: all 0.15s ease-in;
+  background-color: $form-bg;
+  color: $form-color;
+  display: block;
+  &:focus,
+  &:active {
+    box-shadow: $form-focus-shadow;
+    outline: 0;
+  }
+}
+
+input,
+select {
+  height: calc($form-fs + calc(2 * $form-py) + $input-extra-height);
+}
+
+select {
+  appearance: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  &::after {
+    content: "\e921";
+    font-family: "icomoon";
+    font-size: 1rem;
+    color: inherit;
+  }
+}
+
+// *👉 Different-Styles
+@each $size in $form-size {
+  .form-#{$size} {
+    @if $size== "lg" {
+      padding: $form-py-lg $form-px-lg;
+      height: calc($form-fs + calc(2 * $form-py-lg) + $input-extra-height);
+    } @else if $size== "sm" {
+      height: calc($form-fs-sm + calc(2 * $form-py-sm) + $input-extra-height);
+      padding: $form-py-sm $form-px-sm;
+      font-size: $form-fs-sm;
+    } @else if $size== "xs" {
+      height: calc($form-fs-xs + calc(2 * $form-py-xs) + $input-extra-height);
+      padding: $form-py-xs $form-px-xs;
+      font-size: $form-fs-xs;
+    }
+  }
+}
+
+@each $label in $form-radius-type {
+  .form-#{$label} {
+    @if $label== "pill" {
+      border-radius: $form-pill-radius;
+    } @else if $label== "sharp" {
+      border-radius: $form-sharp-radius;
+    }
+  }
+}
+
+.form {
+  &-btn {
+    display: flex;
+    input,
+    select {
+      border-top-right-radius: unset;
+      border-bottom-right-radius: unset;
+    }
+    button {
+      border-top-left-radius: unset;
+      border-bottom-left-radius: unset;
+    }
+  }
+  &-icon {
+    position: relative;
+    i,
+    svg,
+    span {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.25rem;
+      color: $cool-gray-500;
+      &.sm {
+        font-size: 1rem;
+      }
+    }
+    &.head {
+      input,
+      select {
+        padding-left: 2.5rem;
+      }
+      i,
+      svg,
+      span {
+        left: 0.75rem;
+      }
+    }
+    &.trail {
+      input {
+        padding-right: 2.5rem;
+      }
+      i,
+      svg,
+      span {
+        right: 0.75rem;
+      }
+    }
+  }
+  &-error {
+    input,
+    select,
+    textarea {
+      border-color: $red-600;
+    }
+    small,
+    i {
+      color: $red-600;
+    }
+  }
+}
+
+// !🚨 HTML-Attribute-Styles
+input,
+select,
+textarea {
+  &:disabled {
+    background-color: $form-disabled-bg;
+  }
+}

@@ -1,0 +1,103 @@
+$cell-padding: 0.5rem;
+$table-search-bg: transparent;
+$table-search-border: unset;
+
+table {
+  width: 100%;
+}
+
+.table {
+  &-striped {
+    tr {
+      &:nth-child(even) {
+        td {
+          background-color: $cool-gray-100;
+        }
+      }
+    }
+  }
+  &-responsive {
+    // width: 100%;
+    // overflow-x: auto;
+
+    table {
+      min-width: 768px;
+    }
+  }
+  &-filter {
+    padding: 1rem 1.5rem;
+    box-shadow: inset 0px -1px 0px $cool-gray-300;
+    @include flex(center);
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    .form {
+      &-control {
+        background: $table-search-bg;
+        border: $table-search-border;
+      }
+      &-icon {
+        flex-grow: 1;
+      }
+    }
+  }
+  &-pagination {
+    @include flex(center, space-between);
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    box-shadow: inset 0px 1px 0px $cool-gray-300;
+    .data-count {
+      @include flex(center);
+      gap: 0.5rem;
+      p {
+        color: $cool-gray-600;
+      }
+      .form-select {
+        width: 3.5rem;
+        font-size: 0.75rem;
+        padding: 0.25rem 1rem 0.25rem 0.5rem;
+      }
+    }
+    .pagination-navbar {
+      margin-left: 1rem;
+      display: flex;
+      gap: 0.125rem;
+      li {
+        flex-shrink: 0;
+      }
+      .btn-ghost-blue {
+        color: $cool-gray-800;
+        min-width: 1.5rem;
+        &.active {
+          background-color: $blue-600;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+th,
+td {
+  background-color: $white;
+  padding: $cell-padding;
+  .form-switch {
+    .form-check-input {
+      width: 2.25em;
+    }
+  }
+}
+th {
+  @include typography(1rem, 600, $cool-gray-600, 150%);
+  box-shadow: inset 0px -2px 0px $cool-gray-300;
+}
+td {
+  @include typography(1rem, 400, $cool-gray-800, 100%);
+
+  .btn-sm {
+    padding: unset;
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 1.125rem;
+  }
+}

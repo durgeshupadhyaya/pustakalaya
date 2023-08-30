@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Kitab</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg py-16 bg-white">
+        <div class="container gap-lg-100 gap-16">
+          <button
+            class="btn-sm canvabtn btn-primary"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="d-flex gap-8">
+            <a class="navbar-brand" href="#">Navbar</a>
+
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle small fw-medium text-cGray700"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  ALL CATEGORIES
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item d-flex flex-center-between" href="#"
+                      >School Books<i class="fa-solid fa-angle-right small"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Pre-Nursery, Nursery and Kindergarten</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Class I- VIII</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Class IX-X</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Class XI-XII</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-flex flex-center-between" href="#"
+                      >College Books (10 +2)
+                      <i class="fa-solid fa-angle-right small"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li>
+                        <a
+                          class="dropdown-item d-flex flex-center-between"
+                          href="#"
+                          >Grade 11<i class="fa-solid fa-angle-right small"></i
+                        ></a>
+                        <ul class="dropdown-menu dropdown-submenu">
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Management Faculty</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex flex-center-between"
+                              href="#"
+                              >Grade 11<i
+                                class="fa-solid fa-angle-right small"
+                              ></i
+                            ></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                              <li>
+                                <a class="dropdown-item" href="#">Managty</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">Scielty</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">Humanilty</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">Llty</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Science Faculty</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Humanities Faculty</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Law Faculty</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item d-flex flex-center-between"
+                          href="#"
+                          >Grade 12 <i class="fa-solid fa-angle-right small"></i
+                        ></a>
+                        <ul class="dropdown-menu dropdown-submenu">
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Management Faculty</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Science Faculty</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Humanities Faculty</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Law Faculty</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">CTEVT Books</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Bachelor Level Books</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Master Level Books</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Competition Exam Books(Lok Sewa)</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Novels and More (Fiction and Non-fiction)</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Childrens Story Books </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Novels and More</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Other Books (Atlas, Dictionary etc)</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Stationery </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-center-between gap-32 order-sm-3">
+            <a class="align-center gap-8 h5">
+              <i class="fa-solid fa-user text-cGray700"></i>
+            </a>
+            <!-- <ul>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle small fw-medium text-cGray700"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Welcome, Bibek
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">History</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Demo</a>
+                  </li>
+                </ul>
+              </li>
+            </ul> -->
+            <a class="align-center gap-8 h5 position-relative">
+              <i class="fa-solid fa-cart-shopping text-cGray700"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge circle-xxs bg-danger"
+              >
+                3
+              </span>
+            </a>
+          </div>
+          <form class="d-flex flex-grow-1">
+            <input
+              class="form-control border-end-0 rounded-0"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn-sm btn-primary btn-outline-success rounded-0"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
+      >
+        <div class="offcanvas-header bg-primary">
+          <a
+            href="#"
+            class="offcanvas-title h5 text-white"
+            id="offcanvasExampleLabel"
+            >Categories</a
+          >
+          <button
+            type="button"
+            class="btn-close text-primary"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <i class="fa-solid fa-xmark text-white"></i>
+          </button>
+        </div>
+        <div class="offcanvas-body p-0">
+          <div class="aside">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link d-flex flex-center-between" href="#">
+                  Category 1 <i class="fa-solid fa-plus"></i>
+                </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="nav-link" href="#">SubCategory 1 </a></li>
+                  <li><a class="nav-link" href="#">SubCategory 2 </a></li>
+                  <li><a class="nav-link" href="#">SubCategory 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex flex-center-between" href="#">
+                  Category 2 <i class="fa-solid fa-plus"></i>
+                </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="nav-link" href="#">SubCategory 1 </a></li>
+                  <li><a class="nav-link" href="#">SubCategory 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex flex-center-between" href="#">
+                  Category 2<i class="fa-solid fa-plus"></i>
+                </a>
+                <ul class="submenu dropdown-menu">
+                  <li>
+                    <a class="nav-link d-flex flex-center-between" href="#"
+                      >Submenu item 3
+                      <i class="fa-solid fa-plus"></i>
+                    </a>
+                    <ul class="submenu dropdown-menu">
+                      <li>
+                        <a class="nav-link" href="#">Multi SubCategory 1</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#">Multi SubCategory 2</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#">Multi SubCategory 3</a>
+                      </li>
+                      <li>
+                        <a class="nav-link d-flex flex-center-between" href="#"
+                          >Submenu item 3
+                          <i class="fa-solid fa-plus"></i>
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                          <li>
+                            <a class="nav-link" href="#">Multgory 1</a>
+                          </li>
+                          <li>
+                            <a class="nav-link" href="#">Mulgory 2</a>
+                          </li>
+                          <li>
+                            <a class="nav-link" href="#">Multiegory 3</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="nav-link" href="#">SubCategory 1 </a></li>
+                  <li><a class="nav-link" href="#">SubCategory 2</a></li>
+                  <li>
+                    <a class="nav-link d-flex flex-center-between" href="#"
+                      >Submenu item 3
+                      <i class="fa-solid fa-plus"></i>
+                    </a>
+                    <ul class="submenu dropdown-menu">
+                      <li>
+                        <a class="nav-link" href="#">Multi SubCategory 1</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#">Multi SubCategory 2</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#">Multi SubCategory 3</a>
+                      </li>
+                      <li>
+                        <a class="nav-link d-flex flex-center-between" href="#"
+                          >Submenu item 3
+                          <i class="fa-solid fa-plus"></i>
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                          <li>
+                            <a class="nav-link" href="#">Multgory 1</a>
+                          </li>
+                          <li>
+                            <a class="nav-link" href="#">Mulgory 2</a>
+                          </li>
+                          <li>
+                            <a class="nav-link" href="#">Multiegory 3</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Category 4 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Category 5</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Category 6 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Category 7</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="top-menu-bar bg-primary100">
+        <div class="container">
+          <ul class="text-cGray100 gap-16 gap-xs-24 gap-md-32 gap-xxl-48 py-8">
+            <li>
+              <a href="#" class="small fw-medium gap-8 flex-center-center">
+                <!-- <i class="fa-solid fa-house"></i> -->
+                Home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="small fw-medium gap-8 flex-center-center">
+                <!-- <i class="fa-solid fa-users"></i> -->
+                About Us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="small fw-medium gap-8 flex-center-center">
+                <!-- <i class="fa-solid fa-blog"></i> -->
+                Blogs</a
+              >
+            </li>
+            <li>
+              <a href="#" class="small fw-medium gap-8 flex-center-center">
+                <!-- <i class="fa-solid fa-book-open"></i> -->
+                Bookstore</a
+              >
+            </li>
+            <li>
+              <a href="#" class="small fw-medium gap-8 flex-center-center">
+                <!-- <i class="fa-regular fa-address-book"></i> -->
+                Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="py-16"></div>
+    </header>
+    <main>
+      <!-- Product Display Section Starts -->
+      <section class="product-display">
+        <div class="container">
+          <div class="bg-white p-12 rounded-4">
+            <div class="row gap-12-row">
+              <div class="col-lg-4 col-sm-12">
+                <swiper-container
+                  style="
+                    --swiper-navigation-color: #fff;
+                    --swiper-pagination-color: #fff;
+                  "
+                  class="mySwiper"
+                  thumbs-swiper=".mySwiper2"
+                  loop="true"
+                  space-between="10"
+                  navigation="true"
+                >
+                  <swiper-slide>
+                    <div class="img-portrait">
+                      <img
+                        src="https://images.pexels.com/photos/4010464/pexels-photo-4010464.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt=""
+                        class="zoom"
+                      />
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <div class="img-portrait">
+                      <img
+                        src="https://images.pexels.com/photos/1866761/pexels-photo-1866761.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt=""
+                        class="zoom"
+                      />
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <div class="img-portrait">
+                      <img
+                        src="https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt=""
+                        class="zoom"
+                      />
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <div class="img-portrait">
+                      <img
+                        src="https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt=""
+                        class="zoom"
+                      />
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <div class="img-portrait">
+                      <img
+                        src="https://images.pexels.com/photos/931154/pexels-photo-931154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt=""
+                        class="zoom"
+                      />
+                    </div>
+                  </swiper-slide>
+                </swiper-container>
+
+                <swiper-container
+                  class="mySwiper2 mt-12"
+                  loop="true"
+                  space-between="10"
+                  slides-per-view="4"
+                  free-mode="true"
+                  watch-slides-progress="true"
+                >
+                  <swiper-slide>
+                    <div class="img-portrait">
+                      <img
+                        src="https://images.pexels.com/photos/4010464/pexels-photo-4010464.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt=""
+                      />
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <div class="img-portrait">
+                      <img
+                        src="https://images.pexels.com/photos/1866761/pexels-photo-1866761.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt=""
+                      />
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <div class="img-portrait">
+                      <img
+                        src="https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt=""
+                      />
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <div class="img-portrait">
+                      <img
+                        src="https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt=""
+                      />
+                    </div>
+                  </swiper-slide>
+                  <swiper-slide>
+                    <div class="img-portrait">
+                      <img
+                        src="https://images.pexels.com/photos/931154/pexels-photo-931154.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt=""
+                      />
+                    </div>
+                  </swiper-slide>
+                </swiper-container>
+              </div>
+              <div class="col-lg-7 col-sm-12">
+                <div class="product-details px-12 px-sm-40 mt-12">
+                  <nav aria-label="breadcrumb">
+                    <ul class="breadcrumb-main">
+                      <li class="breadcrumb-main-item">
+                        <a href="#">Home</a>
+                      </li>
+                      <li class="breadcrumb-main-item">
+                        <a href="#">Categories</a>
+                      </li>
+                      <li class="breadcrumb-main-item" aria-current="page">
+                        <a href="" class="breadcrumb-main-link">Product</a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <h1 class="text-cGray600 h3 fw-medium mt-24">
+                    Rise And Fall Of the Rana Regime
+                  </h1>
+                  <div class="h5 fw-medium mt-8">
+                    By: <span class="text-primary100">Bibek Gurung</span>
+                  </div>
+                  <div class="text-primary100 h6 fw-medium mt-16">
+                    Publisher : Gurung Books
+                  </div>
+                  <div class="p cGray500 text-justify mt-24 clamp-3">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Voluptas iusto neque distinctio iste excepturi veniam
+                    accusamus explicabo tempora rem repellendus magni dolorem
+                    doloremque, harum eligendi officia quam deserunt impedit
+                    assumenda, maxime dignissimos dolore eaque aliquam
+                    obcaecati? Cum, consequuntur a, nisi id quis modi deleniti
+                    illum delectus molestiae dolore esse expedita!
+                  </div>
+
+                  <div class="p text-cGray700 mt-24">Cash On Delivery</div>
+                  <div class="price h6 text-primary100 mt-12 fw-regular">
+                    Price: <span class="h5">Rs. 4000</span>
+                  </div>
+
+                  <div class="d-flex gap-16 mt-24 quantity">
+                    <input
+                      type="button"
+                      value="-"
+                      class="minus btn btn-sm btn-gray"
+                    />
+                    <input
+                      type="number"
+                      class="value text-center"
+                      min="1"
+                      value="1"
+                    />
+                    <input
+                      type="button"
+                      value="+"
+                      class="plus btn btn-sm btn-gray"
+                    />
+                  </div>
+
+                  <div class="d-flex gap-12 mt-md-24 mt-24 flex-wrap">
+                    <a
+                      href="#"
+                      class="btn btn-primary text-white d-flex gap-8 justify-content-center flex-grow-1 flex-md-grow-0"
+                      ><i class="fa-sharp fa-solid fa-bag-shopping"></i>Buy
+                      Now</a
+                    >
+                    <a
+                      href="#"
+                      class="btn btn-primary text-white d-flex gap-8 justify-content-center flex-grow-1 flex-md-grow-0"
+                      ><i class="fa-solid fa-cart-shopping"></i>ADD TO CART</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Product Display Section Ends -->
+
+      <!-- About Product Section Starts -->
+      <section class="product-about mt-24">
+        <div class="container">
+          <div class="bg-white p-32 rounded-4">
+            <h2 class="h4 text-primary100">About the Book</h2>
+            <div class="p text-cGray600 text-justify fw-medium mt-16">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+              sunt optio aspernatur enim laudantium, doloribus placeat, debitis
+              expedita velit tenetur asperiores consequatur nulla eius minus
+              reiciendis mollitia iure fuga quasi? Temporibus minus tempora
+              assumenda iusto officia id adipisci hic, doloremque similique nemo
+              expedita nam harum autem soluta debitis dolorem architecto a
+              repellat ratione? Sed maiores nulla tenetur atque architecto. Vel
+              deleniti dolore fuga. Adipisci tempore debitis explicabo animi
+              neque dolorem harum optio esse veniam autem ipsa asperiores,
+              voluptatem incidunt fugiat sed aspernatur laborum beatae unde, id
+              nostrum a quia. Consectetur omnis, adipisci ex vero ullam corrupti
+              excepturi consequatur harum quia dolorum, tempora cupiditate
+              laborum totam quis dolorem labore soluta velit et placeat nihil ut
+              sapiente? Rerum maiores molestias eligendi ut quidem, magnam id
+              corporis ducimus cumque maxime nemo, eum, quibusdam saepe quam
+              fuga numquam? Corrupti suscipit eveniet commodi! Deserunt
+              laudantium aliquid rerum doloribus dolorem possimus fugiat modi
+              cum error animi!
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Product Section Ends-->
+
+      <!-- Best Sellers Section Starts -->
+      <section class="bestsellers mt-24 mt-sm-48">
+        <div class="container">
+          <div class="flex-center-between">
+            <h2 class="h4 text-primary100">Best Sellers</h2>
+            <a href="#" class="btn btn-sm btn-primary">View All</a>
+          </div>
+          <div class="row mt-24 gap-12-row">
+            <div
+              class="col-lg-2 col-md-4 col-sm-6 col-6 d-grid align-self-stretch"
+            >
+              <div class="card-product shadow-sm p-8 bg-white rounded-4">
+                <div class="position-relative">
+                  <div class="img-portrait-02">
+                    <img src="../assets/images/book.jfif" alt="" />
+
+                    <div class="discount flex-start align-end">
+                      <div class="amount small text-white">32%</div>
+                    </div>
+                  </div>
+                  <h4 class="h6 fw-bold text-primary100">Demo Book Name</h4>
+                  <p class="small fw-medium">By Man Author</p>
+                  <h6 class="text-cGray600 p">Rs. 600</h6>
+                  <div class="flex-center-between mt-8 gap-4 flex-wrap">
+                    <a
+                      class="flex-center btn btn-xs py-8 px-4 px-sm-8 btn-primary text-center stretched-link flex-grow-1"
+                    >
+                      Buy Now
+                    </a>
+                    <button
+                      class="btn flex-center btn-xs py-8 px-4 px-sm-8 btn-primary text-center z-5 flex-grow-1"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-2 col-md-4 col-sm-6 col-6 d-grid align-self-stretch"
+            >
+              <div class="card-product shadow-sm p-8 bg-white rounded-4">
+                <div class="position-relative">
+                  <div class="img-portrait-02">
+                    <img src="../assets/images/book.jfif" alt="" />
+
+                    <div class="discount flex-start align-end">
+                      <div class="amount small text-white">32%</div>
+                    </div>
+                  </div>
+                  <h4 class="h6 fw-bold text-primary100">Demo Book Name</h4>
+                  <p class="small fw-medium">By Man Author</p>
+                  <h6 class="text-cGray600 p">Rs. 600</h6>
+                  <div class="flex-center-between mt-8 gap-4 flex-wrap">
+                    <a
+                      class="flex-center btn btn-xs py-8 px-4 px-sm-8 btn-primary text-center stretched-link flex-grow-1"
+                    >
+                      Buy Now
+                    </a>
+                    <button
+                      class="btn flex-center btn-xs py-8 px-4 px-sm-8 btn-primary text-center z-5 flex-grow-1"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-2 col-md-4 col-sm-6 col-6 d-grid align-self-stretch"
+            >
+              <div class="card-product shadow-sm p-8 bg-white rounded-4">
+                <div class="position-relative">
+                  <div class="img-portrait-02">
+                    <img src="../assets/images/book.jfif" alt="" />
+
+                    <div class="discount flex-start align-end">
+                      <div class="amount small text-white">32%</div>
+                    </div>
+                  </div>
+                  <h4 class="h6 fw-bold text-primary100">Demo Book Name</h4>
+                  <p class="small fw-medium">By Man Author</p>
+                  <h6 class="text-cGray600 p">Rs. 600</h6>
+                  <div class="flex-center-between mt-8 gap-4 flex-wrap">
+                    <a
+                      class="flex-center btn btn-xs py-8 px-4 px-sm-8 btn-primary text-center stretched-link flex-grow-1"
+                    >
+                      Buy Now
+                    </a>
+                    <button
+                      class="btn flex-center btn-xs py-8 px-4 px-sm-8 btn-primary text-center z-5 flex-grow-1"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-2 col-md-4 col-sm-6 col-6 d-grid align-self-stretch"
+            >
+              <div class="card-product shadow-sm p-8 bg-white rounded-4">
+                <div class="position-relative">
+                  <div class="img-portrait-02">
+                    <img src="../assets/images/book.jfif" alt="" />
+
+                    <div class="discount flex-start align-end">
+                      <div class="amount small text-white">32%</div>
+                    </div>
+                  </div>
+                  <h4 class="h6 fw-bold text-primary100">Demo Book Name</h4>
+                  <p class="small fw-medium">By Man Author</p>
+                  <h6 class="text-cGray600 p">Rs. 600</h6>
+                  <div class="flex-center-between mt-8 gap-4 flex-wrap">
+                    <a
+                      class="flex-center btn btn-xs py-8 px-4 px-sm-8 btn-primary text-center stretched-link flex-grow-1"
+                    >
+                      Buy Now
+                    </a>
+                    <button
+                      class="btn flex-center btn-xs py-8 px-4 px-sm-8 btn-primary text-center z-5 flex-grow-1"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-2 col-md-4 col-sm-6 col-6 d-grid align-self-stretch"
+            >
+              <div class="card-product shadow-sm p-8 bg-white rounded-4">
+                <div class="position-relative">
+                  <div class="img-portrait-02">
+                    <img src="../assets/images/book.jfif" alt="" />
+
+                    <div class="discount flex-start align-end">
+                      <div class="amount small text-white">32%</div>
+                    </div>
+                  </div>
+                  <h4 class="h6 fw-bold text-primary100">Demo Book Name</h4>
+                  <p class="small fw-medium">By Man Author</p>
+                  <h6 class="text-cGray600 p">Rs. 600</h6>
+                  <div class="flex-center-between mt-8 gap-4 flex-wrap">
+                    <a
+                      class="flex-center btn btn-xs py-8 px-4 px-sm-8 btn-primary text-center stretched-link flex-grow-1"
+                    >
+                      Buy Now
+                    </a>
+                    <button
+                      class="btn flex-center btn-xs py-8 px-4 px-sm-8 btn-primary text-center z-5 flex-grow-1"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-2 col-md-4 col-sm-6 col-6 d-grid align-self-stretch"
+            >
+              <div class="card-product shadow-sm p-8 bg-white rounded-4">
+                <div class="position-relative">
+                  <div class="img-portrait-02">
+                    <img src="../assets/images/book.jfif" alt="" />
+
+                    <div class="discount flex-start align-end">
+                      <div class="amount small text-white">32%</div>
+                    </div>
+                  </div>
+                  <h4 class="h6 fw-bold text-primary100">Demo Book Name</h4>
+                  <p class="small fw-medium">By Man Author</p>
+                  <h6 class="text-cGray600 p">Rs. 600</h6>
+                  <div class="flex-center-between mt-8 gap-4 flex-wrap">
+                    <a
+                      class="flex-center btn btn-xs py-8 px-4 px-sm-8 btn-primary text-center stretched-link flex-grow-1"
+                    >
+                      Buy Now
+                    </a>
+                    <button
+                      class="btn flex-center btn-xs py-8 px-4 px-sm-8 btn-primary text-center z-5 flex-grow-1"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Best Sellers Section Ends  -->
+    </main>
+    <footer>
+      <section class="footer mt-24 mt-sm-40 py-24 bg-primary100">
+        <div class="container">
+          <div class="row gap-16-row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="align-center gap-12 text-white py-12 heading">
+                <!-- <i class="fa-solid fa-phone h6"></i> -->
+                <h6>CONTACT DETAILS</h6>
+              </div>
+              <div class="info mt-24">
+                <ul class="flex-column gap-12">
+                  <a href="#" class="text-white">Logo</a>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Phone: 015864579
+                  </li>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Fax: 015864579
+                  </li>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Fax: 015864579
+                  </li>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Location: Kathmandu
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="align-center gap-12 text-white py-12 heading">
+                <!-- <i class="fa-solid fa-envelope h6"></i> -->
+                <h6>KNOW US MORE</h6>
+              </div>
+              <div class="info mt-24">
+                <ul class="flex-column gap-12">
+                  <li class="text-cGray300 x-small fw-medium">About Us</li>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Privacy Policy
+                  </li>
+                  <li class="text-cGray300 x-small fw-medium">Return Policy</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="align-center gap-12 text-white py-12 heading">
+                <!-- <i class="fa-solid fa-file-shield h6"></i> -->
+                <h6>YOUR ORDERS</h6>
+              </div>
+              <div class="info mt-24">
+                <ul class="flex-column gap-12">
+                  <li class="text-cGray300 x-small fw-medium">
+                    The Nepal Books Publication
+                  </li>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Thamel Street no 17
+                  </li>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Location: Kathmandu
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="align-center gap-12 text-white py-12 heading">
+                <!-- <i class="fa-solid fa-phone h6"></i> -->
+                <h6>PAYMENT METHOD</h6>
+              </div>
+              <div class="d-flex gap-12 mt-24 flex-wrap">
+                <img
+                  src="../assets/icon/esewa.png"
+                  class="bg-white"
+                  alt=""
+                  width="90px"
+                  height="40px"
+                />
+
+                <img
+                  src="../assets/icon/khalti.png"
+                  alt=""
+                  class="bg-white"
+                  width="90px"
+                  height="40px"
+                />
+                <img
+                  src="../assets/icon/visa.png"
+                  alt=""
+                  class="bg-white"
+                  width="90px"
+                  height="40px"
+                />
+                <img
+                  src="../assets/icon/visa.png"
+                  alt=""
+                  class="bg-white"
+                  width="90px"
+                  height="40px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="copyright bg-primary100 text-center text-white small fw-medium py-8"
+      >
+        &copy;2023 All Rights Reserved
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/zoomsl.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script>
+      $(function () {
+        $(".zoom").imagezoomsl();
+      });
+    </script>
+    <script>
+      $(".minus, .plus").click(function (e) {
+        e.preventDefault();
+        var $input = $(this).siblings(".value");
+        var val = parseInt($input.val(), 10);
+        $input.val(val + ($(this).hasClass("minus") ? -1 : 1));
+        if ($input.val() < 1) {
+          $input.val(1);
+        }
+      });
+    </script>
+  </body>
+</html>

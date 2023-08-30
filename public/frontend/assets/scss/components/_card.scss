@@ -1,0 +1,125 @@
+@mixin card($radius: 0.25rem) {
+    background-color: $white;
+    border-radius: $radius;
+    padding: 1.5rem;
+    height: 100%;
+    word-break: break-all;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    &-default {
+        @include card();
+    }
+    &-edge {
+        &-rounded {
+            @include card(0.5rem);
+        }
+        &-pointed {
+            @include card(unset);
+        }
+    }
+}
+
+.card {
+    &-product {
+        user-select: none;
+
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(7px);
+        overflow: hidden;
+        transition: 0.5s all;
+        ::before {
+            position: fixed;
+            content: "";
+            box-shadow: 0 0 120px 60px #ffffff09;
+            top: -10%;
+            left: -100%;
+            transform: rotate(-45deg);
+            height: 60rem;
+            transition: 0.7s all;
+        }
+        &:hover {
+            transform: scale(1);
+            ::before {
+                top: -100%;
+                left: 200%;
+            }
+            .img-portrait-02 {
+                img {
+                    transform: scale(1.02);
+                }
+            }
+        }
+        .bottom {
+            justify-self: flex-end;
+        }
+        .img-portrait-02 {
+            position: relative;
+            .discount {
+                position: absolute;
+                z-index: 9;
+                top: -50px;
+                right: -50px;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background: $red;
+                .amount {
+                    margin: 0 0px 18px 15px;
+                }
+            }
+
+            img {
+                transition: 0.5s all;
+            }
+        }
+
+        .offer {
+            background: $red;
+            border-radius: 3px 0 0 3px;
+            color: $white;
+            display: inline-block;
+            height: 25px;
+            line-height: 26px;
+            padding: 0 20px 0 23px;
+            position: relative;
+            margin: 0 10px 10px 0;
+            text-decoration: none;
+            &::before {
+                background: $white;
+
+                box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+                content: "";
+                height: 7px;
+                left: 10px;
+                position: absolute;
+                width: 7px;
+                border-radius: 50%;
+                top: 10px;
+            }
+            &::after {
+                background: $white;
+                border-bottom: 12px solid transparent;
+                border-left: 10px solid $red;
+                border-top: 13px solid transparent;
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+
+    &-blog {
+        img {
+            transition: 0.5s all;
+        }
+        :hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+.accordion {
+    &-01 {
+        padding: 0.75rem;
+        background: white;
+        &:not(:first-child) {
+            border-top: 1px solid $gray-88;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+    }
+    &-02 {
+        background: $blue;
+        color: white;
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+            a {
+                text-transform: uppercase;
+                color: $blue-80;
+                font-weight: 800;
+                @include rfs(12px);
+            }
+        }
+    }
+    &-03 {
+        // width: 100%;
+        // padding: 1rem;
+        // h6{
+        //   font-weight: 600;
+        // }
+    }
+    &-04 {
+        border-bottom: 1px solid $gray-92;
+        border-left: 2px solid transparent;
+        &.expanded {
+            border-left: 2px solid $info;
+        }
+        .header {
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+        a {
+            color: $info;
+            display: flex;
+            align-items: center;
+            &:before {
+                content: "\e90e";
+                font-family: "icomoon";
+                display: block;
+                color: $info;
+                margin-right: 0.5rem;
+                @include rfs(10px);
+                cursor: pointer;
+                margin-top: 0.25rem;
+            }
+            &[aria-expanded="true"] {
+                &:before {
+                    content: "\e912";
+                    font-family: "icomoon";
+                    color: $blue;
+                }
+            }
+            &.noSub {
+                &:before {
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+}
+
+.hasSub {
+    &:after {
+        content: "\e921";
+        font-family: "icomoon";
+        color: $gray-50;
+        @include rfs(14px);
+        cursor: pointer;
+    }
+    &[aria-expanded="true"] {
+        &:after {
+            content: "\e912";
+            font-family: "icomoon";
+            color: $blue;
+        }
+    }
+}

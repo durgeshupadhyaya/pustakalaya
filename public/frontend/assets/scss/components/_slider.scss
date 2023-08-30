@@ -1,0 +1,59 @@
+.swiper {
+  &-pagination {
+    &-center {
+      .swiper-pagination {
+        margin-top: 3rem !important;
+        position: relative !important;
+      }
+    }
+    &-right {
+      .swiper-pagination {
+        text-align: right;
+        bottom: unset !important;
+        top: calc(100% - 2rem);
+      }
+    }
+    &-bullet {
+      width: 1rem !important;
+      border-radius: 0.25rem !important;
+      &-active {
+        width: 1.5rem !important;
+        transition: 0.2s !important;
+        background: $primary !important;
+      }
+    }
+    &.white {
+      .swiper-pagination-bullet {
+        background-color: $white;
+        opacity: 1;
+        &-active {
+          background-color: $accent !important;
+        }
+      }
+    }
+  }
+  &-testimonialV4 {
+    .swiper-wrapper {
+      padding-bottom: 2rem;
+    }
+    .swiper-slide {
+      height: auto;
+      display: flex;
+    }
+  }
+  // &-slide {
+  //   height: auto !important;
+  // }
+}
+
+.bullet-accent {
+  .swiper-pagination {
+    &-bullet {
+      background-color: $cool-gray-300 !important;
+      opacity: 1;
+    }
+    &-bullet-active {
+      background-color: $accent !important;
+    }
+  }
+}

@@ -1,0 +1,227 @@
+//mixin
+@mixin aspect-ratio-box($width, $height, $fit: cover) {
+    height: 0;
+    overflow: hidden;
+    padding-top: calc($height / $width) * 100%;
+    background: white;
+    position: relative;
+    img,
+    video,
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: $fit;
+    }
+}
+
+//Variables
+$avatar-size: ( xs: 1.5rem, sm: 2rem, md: 2.5rem, lg: 3rem, xl: 3.5rem, xxl: 4rem, xxxl: 4.5rem, );
+$avatar-status: ( offline: $red-500, online: $green-500, dnd: $yellow-500, );
+@mixin avatar-status($background, $dimension) {
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 70%;
+        @include shape(circle, $dimension, $background);
+        border: 2px solid $white;
+    }
+}
+
+@mixin avatar($dimension, $status-size) {
+    @extend .img;
+    position: relative;
+    overflow: unset !important;
+    width: $dimension;
+    height: $dimension;
+    border-radius: 50%;
+    background-color: $yellow-100;
+    color: $yellow-900;
+    font-size: 0.875rem;
+    @include flex(center, center);
+    img {
+        object-position: top;
+        border-radius: 50%;
+    }
+    i {
+        font-size: $status-size;
+        position: absolute;
+        bottom: 0;
+        left: 70%;
+        border: 1px solid $white;
+        background-color: $white;
+        border-radius: 50%;
+    }
+    @each $label,
+    $value in $avatar-status {
+        &.#{$label} {
+            @if $label=="offline" {
+                @include avatar-status($value, $status-size);
+            }
+            @else if $label=="online" {
+                @include avatar-status($value, $status-size);
+            }
+            @else {
+                @include avatar-status($value, $status-size);
+            }
+        }
+    }
+}
+
+@mixin avatar-initial($dimension, $font-size, $status-size) {
+    position: relative;
+    overflow: unset;
+    width: $dimension;
+    height: $dimension;
+    border-radius: 50%;
+    background-color: $yellow-100;
+    color: $yellow-900;
+    font-size: $font-size;
+    @include flex(center, center);
+    @each $label,
+    $value in $avatar-status {
+        &.#{$label} {
+            @if $label=="offline" {
+                @include avatar-status($value, $status-size);
+            }
+            @else if $label=="online" {
+                @include avatar-status($value, $status-size);
+            }
+            @else {
+                @include avatar-status($value, $status-size);
+            }
+        }
+    }
+    i {
+        font-size: $status-size;
+        position: absolute;
+        bottom: 0;
+        left: 70%;
+        border: 1px solid $white;
+        background-color: $white;
+        border-radius: 50%;
+    }
+}
+
+@each $label,
+$value in $avatar-size {
+    .avatar-#{$label} {
+        @if $label=="xs" {
+            @include avatar($value, 0.25rem);
+        }
+        @else if $label=="sm" {
+            @include avatar($value, 0.625rem);
+        }
+        @else if $label=="md" {
+            @include avatar($value, 0.75rem);
+        }
+        @else if $label=="lg" {
+            @include avatar($value, 0.75rem);
+        }
+        @else if $label=="xl" {
+            @include avatar($value, 0.875rem);
+        }
+        @else if $label=="xxl" {
+            @include avatar($value, 1rem);
+        }
+        @else if $label=="xxxl" {
+            @include avatar($value, 1.25rem);
+        }
+    }
+}
+
+@each $label,
+$value in $avatar-size {
+    .avatar-initial-#{$label} {
+        @if $label=="xs" {
+            @include avatar-initial($value, 0.625rem, 0.25rem);
+        }
+        @else if $label=="sm" {
+            @include avatar-initial($value, 0.625rem, 0.625rem);
+        }
+        @else if $label=="md" {
+            @include avatar-initial($value, 0.75rem, 0.75rem);
+        }
+        @else if $label=="lg" {
+            @include avatar-initial($value, 0.75rem, 0.75rem);
+        }
+        @else if $label=="xl" {
+            @include avatar-initial($value, 0.875rem, 0.875rem);
+        }
+        @else if $label=="xxl" {
+            @include avatar-initial($value, 0.875rem, 1rem);
+        }
+        @else if $label=="xxxl" {
+            @include avatar-initial($value, 0.875rem, 1.25rem);
+        }
+    }
+}
+
+.img {
+    overflow: hidden;
+    display: block;
+    img,
+    video,
+    svg,
+    iframe {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &-landscape {
+        @include aspect-ratio-box(16, 9);
+        &-02{
+            @include aspect-ratio-box(4, 3);
+        }
+    }
+    &-wide {
+        @include aspect-ratio-box(30, 11);
+        @include media-breakpoint-down(sm) {
+            @include aspect-ratio-box(16, 9);
+        }
+
+        &-02{
+            @include aspect-ratio-box(30, 8);
+            @include media-breakpoint-down(sm) {
+                @include aspect-ratio-box(16, 9);
+            }
+        }
+    }
+    &-portrait {
+        @include aspect-ratio-box(4, 4);
+        &-02 {
+            @include aspect-ratio-box(4, 6);
+        }
+        &-03 {
+            @include aspect-ratio-box(8, 5);
+        }
+    }
+}
+
+.svg {
+    &-box {
+        position: absolute;
+        bottom: 0;
+        @include media-breakpoint-down(xl) {
+            display: none;
+        }
+        &.left {
+            left: 0;
+        }
+        &.right {
+            right: 0;
+        }
+        &.top {
+            bottom: unset;
+            top: 0;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

@@ -1,0 +1,126 @@
+// .sidebar {
+//   width: var(--sidebar-width);
+//   height: 100%;
+//   background-color: white;
+//   flex-shrink: 0;
+//   transition: margin 0.2s ease-in;
+
+//   &.toggled {
+//     margin-left: calc(-1 * var(--sidebar-width));
+//   }
+//   &-list {
+//     li {
+//       a.hasSub {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//       }
+//     }
+//   }
+//   &-link {
+//     padding: 0.75rem 1rem;
+//     @include rfs(14px);
+//     // color: $gray-32;
+//     display: block;
+//     line-height: 100%;
+//     &.active {
+//       // background-color: $gray-88;
+//     }
+//   }
+//   &-component {
+//     gap: 0.5rem;
+//     padding: unset;
+//     width: 100%;
+//     border-radius: unset;
+//     .nav {
+//       &-link {
+//         font-size: 0.875rem;
+//         // font-weight: 500;
+//         padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+//         color: $gray-900;
+//         &.active {
+//           font-weight: 600;
+//           background-color: $blue-50;
+//           border-radius: unset;
+//           color: $blue-800;
+//           border-right: 3px solid $blue-500;
+//         }
+
+//         &:hover {
+//           color: $blue-600;
+//         }
+//       }
+//     }
+//   }
+
+//   &-search {
+//     padding: 1.5rem 1rem;
+//     position: sticky;
+//     top: 0;
+//     background-color: $white;
+//     input {
+//       width: 100%;
+//     }
+//     &.form-icon {
+//       .ic-search {
+//         left: 1.75rem;
+//       }
+//     }
+//   }
+// }
+
+// .sideicons {
+//   &-wrapper {
+//     position: fixed;
+//     top: 50%;
+//     right: 0;
+//     z-index: 9;
+//     transform: translateY(-50%) translateX(calc(100% - 2.5rem));
+//     @include media-breakpoint-down(md) {
+//       display: none;
+//     }
+//     li {
+//       background-color: white;
+//       padding: 0.5rem;
+//       width: 2.5rem;
+//       max-height: 3rem;
+//       transition: 0.3s linear all;
+//       overflow: hidden;
+//       cursor: pointer;
+//       [class^="ic-"],
+//       [class*=" ic-"] {
+//         color: $primary;
+//         @include rfs(24);
+//       }
+//       &:hover {
+//         background: $secondary;
+//         width: 100%;
+//         transition: width 0.5s $time-func-1;
+//         transform: translateX(calc(-100% + 3rem));
+//         .title {
+//           color: white;
+//           transform: translateX(0);
+//           transition: transform 0.5s $time-func-1, opacity 1s $time-func-1;
+//           opacity: 1;
+//           font-size: 0.875rem;
+//           position: unset;
+//         }
+//         i {
+//           color: $white;
+//         }
+//       }
+//       a {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//       }
+//       .title {
+//         margin: 0 0.75rem;
+//         transform: translateX(-190%);
+//         position: absolute;
+//         opacity: 0;
+//         white-space: nowrap;
+//       }
+//     }
+//   }
+// }

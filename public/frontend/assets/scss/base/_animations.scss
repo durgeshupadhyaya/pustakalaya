@@ -1,0 +1,74 @@
+.slide-down {
+    -webkit-animation: slide-bottom 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-bottom 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(24px);
+        transform: translateY(24px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+
+@keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(24px);
+        transform: translateY(24px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+.slide-down-01 {
+    -webkit-animation: slide-bottom-01 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-bottom-01 {
+    0% {
+        -webkit-transform: translateY(-16px);
+        transform: translateY(-16px);
+    }
+    100% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+}
+
+@keyframes slide-bottom-01 {
+    0% {
+        -webkit-transform: translateY(-16px);
+        transform: translateY(-16px);
+    }
+    100% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+}
+
+//Hover Animations
+[hover] {
+    transition: 0.1s linear all;
+}
+
+[hover~="up"] {
+    &:hover {
+        transform: translateY(-4px);
+        i {
+            color: $primary !important;
+        }
+    }
+}
+
+[hover~="border-primary"] {
+    &:hover {
+        box-shadow: 0 0 0 1px $primary;
+    }
+}

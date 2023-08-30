@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Kitab</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg py-16 bg-white">
+        <div class="container gap-lg-100 gap-16">
+          <button
+            class="btn-sm canvabtn btn-primary"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="d-flex gap-8">
+            <a class="navbar-brand" href="#">Navbar</a>
+
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle small fw-medium text-cGray700"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  ALL CATEGORIES
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item d-flex flex-center-between" href="#"
+                      >School Books<i class="fa-solid fa-angle-right small"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Pre-Nursery, Nursery and Kindergarten</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Class I- VIII</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Class IX-X</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Class XI-XII</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-flex flex-center-between" href="#"
+                      >College Books (10 +2)
+                      <i class="fa-solid fa-angle-right small"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li>
+                        <a
+                          class="dropdown-item d-flex flex-center-between"
+                          href="#"
+                          >Grade 11<i class="fa-solid fa-angle-right small"></i
+                        ></a>
+                        <ul class="dropdown-menu dropdown-submenu">
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Management Faculty</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex flex-center-between"
+                              href="#"
+                              >Grade 11<i
+                                class="fa-solid fa-angle-right small"
+                              ></i
+                            ></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                              <li>
+                                <a class="dropdown-item" href="#">Managty</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">Scielty</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">Humanilty</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">Llty</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Science Faculty</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Humanities Faculty</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Law Faculty</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item d-flex flex-center-between"
+                          href="#"
+                          >Grade 12 <i class="fa-solid fa-angle-right small"></i
+                        ></a>
+                        <ul class="dropdown-menu dropdown-submenu">
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Management Faculty</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Science Faculty</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#"
+                              >Humanities Faculty</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Law Faculty</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">CTEVT Books</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Bachelor Level Books</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Master Level Books</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Competition Exam Books(Lok Sewa)</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Novels and More (Fiction and Non-fiction)</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Childrens Story Books </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Novels and More</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Other Books (Atlas, Dictionary etc)</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Stationery </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-center-between gap-32 order-sm-3">
+            <a class="align-center gap-8 h5">
+              <i class="fa-solid fa-user text-cGray700"></i>
+            </a>
+            <!-- <ul>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle small fw-medium text-cGray700"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Welcome, Bibek
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">History</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Demo</a>
+                  </li>
+                </ul>
+              </li>
+            </ul> -->
+            <a class="align-center gap-8 h5 position-relative">
+              <i class="fa-solid fa-cart-shopping text-cGray700"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge circle-xxs bg-danger"
+              >
+                3
+              </span>
+            </a>
+          </div>
+          <form class="d-flex flex-grow-1">
+            <input
+              class="form-control border-end-0 rounded-0"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn-sm btn-primary btn-outline-success rounded-0"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
+      >
+        <div class="offcanvas-header bg-primary">
+          <a
+            href="#"
+            class="offcanvas-title h5 text-white"
+            id="offcanvasExampleLabel"
+            >Categories</a
+          >
+          <button
+            type="button"
+            class="btn-close text-primary"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <i class="fa-solid fa-xmark text-white"></i>
+          </button>
+        </div>
+        <div class="offcanvas-body p-0">
+          <div class="aside">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link d-flex flex-center-between" href="#">
+                  Category 1 <i class="fa-solid fa-plus"></i>
+                </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="nav-link" href="#">SubCategory 1 </a></li>
+                  <li><a class="nav-link" href="#">SubCategory 2 </a></li>
+                  <li><a class="nav-link" href="#">SubCategory 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex flex-center-between" href="#">
+                  Category 2 <i class="fa-solid fa-plus"></i>
+                </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="nav-link" href="#">SubCategory 1 </a></li>
+                  <li><a class="nav-link" href="#">SubCategory 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex flex-center-between" href="#">
+                  Category 2<i class="fa-solid fa-plus"></i>
+                </a>
+                <ul class="submenu dropdown-menu">
+                  <li>
+                    <a class="nav-link d-flex flex-center-between" href="#"
+                      >Submenu item 3
+                      <i class="fa-solid fa-plus"></i>
+                    </a>
+                    <ul class="submenu dropdown-menu">
+                      <li>
+                        <a class="nav-link" href="#">Multi SubCategory 1</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#">Multi SubCategory 2</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#">Multi SubCategory 3</a>
+                      </li>
+                      <li>
+                        <a class="nav-link d-flex flex-center-between" href="#"
+                          >Submenu item 3
+                          <i class="fa-solid fa-plus"></i>
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                          <li>
+                            <a class="nav-link" href="#">Multgory 1</a>
+                          </li>
+                          <li>
+                            <a class="nav-link" href="#">Mulgory 2</a>
+                          </li>
+                          <li>
+                            <a class="nav-link" href="#">Multiegory 3</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="nav-link" href="#">SubCategory 1 </a></li>
+                  <li><a class="nav-link" href="#">SubCategory 2</a></li>
+                  <li>
+                    <a class="nav-link d-flex flex-center-between" href="#"
+                      >Submenu item 3
+                      <i class="fa-solid fa-plus"></i>
+                    </a>
+                    <ul class="submenu dropdown-menu">
+                      <li>
+                        <a class="nav-link" href="#">Multi SubCategory 1</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#">Multi SubCategory 2</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#">Multi SubCategory 3</a>
+                      </li>
+                      <li>
+                        <a class="nav-link d-flex flex-center-between" href="#"
+                          >Submenu item 3
+                          <i class="fa-solid fa-plus"></i>
+                        </a>
+                        <ul class="submenu dropdown-menu">
+                          <li>
+                            <a class="nav-link" href="#">Multgory 1</a>
+                          </li>
+                          <li>
+                            <a class="nav-link" href="#">Mulgory 2</a>
+                          </li>
+                          <li>
+                            <a class="nav-link" href="#">Multiegory 3</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Category 4 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Category 5</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Category 6 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Category 7</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="top-menu-bar bg-primary100">
+        <div class="container">
+          <ul class="text-cGray100 gap-16 gap-xs-24 gap-md-32 gap-xxl-48 py-8">
+            <li>
+              <a href="#" class="small fw-medium gap-8 flex-center-center">
+                <!-- <i class="fa-solid fa-house"></i> -->
+                Home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="small fw-medium gap-8 flex-center-center">
+                <!-- <i class="fa-solid fa-users"></i> -->
+                About Us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="small fw-medium gap-8 flex-center-center">
+                <!-- <i class="fa-solid fa-blog"></i> -->
+                Blogs</a
+              >
+            </li>
+            <li>
+              <a href="#" class="small fw-medium gap-8 flex-center-center">
+                <!-- <i class="fa-solid fa-book-open"></i> -->
+                Bookstore</a
+              >
+            </li>
+            <li>
+              <a href="#" class="small fw-medium gap-8 flex-center-center">
+                <!-- <i class="fa-regular fa-address-book"></i> -->
+                Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Login Section Starts -->
+      <section class="login">
+        <div class="container">
+          <div class="flex-center-center py-24 py-md-64">
+            <div class="login-form bg-white shadow-sm p-24 rounded-3">
+              <h5>LOGIN</h5>
+              <form action="" class="mt-24">
+                <div>
+                  <label for="exampleInputEmail1" class="form-label"
+                    >EMAIL</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control border-0 bg-cGray200 mt-8 rounded-4"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mt-24">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >PASSWORD</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control border-0 bg-cGray200 mt-8 rounded-4"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+
+                <div class="mt-16 text-primary x-small">
+                  <a href="#">Forgot Password?</a>
+                </div>
+                <button
+                  class="btn text-white bg-primary100 w-100 mt-24 rounded-1"
+                >
+                  Login
+                </button>
+              </form>
+
+              <div class="mt-16 text-center x-small">OR LOGIN WITH</div>
+
+              <div class="align-center gap-8 flex-wrap mt-12">
+                <a
+                  href="#"
+                  class="align-center gap-16 social flex-fill px-24 py-8 rounded-1 small fw-medium"
+                  ><i class="fa-brands fa-facebook-f text-blue900"></i>Sign in
+                  with Facebook</a
+                >
+                <a
+                  href="#"
+                  class="social align-center gap-16 flex-fill px-24 py-8 rounded-1 small fw-medium"
+                >
+                  <img
+                    src="../assets/icon/google.png"
+                    alt=""
+                    width="20"
+                    height="20"
+                  />
+                  Sign in with Google</a
+                >
+              </div>
+              <div class="mt-24 text-center small">
+                New to Kitab?
+                <a href="" class="text-primary100">Create an account</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Login Section Ends -->
+    </main>
+
+    <footer>
+      <section class="footer mt-24 mt-sm-40 py-24 bg-primary100">
+        <div class="container">
+          <div class="row gap-16-row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="align-center gap-12 text-white py-12 heading">
+                <!-- <i class="fa-solid fa-phone h6"></i> -->
+                <h6>CONTACT DETAILS</h6>
+              </div>
+              <div class="info mt-24">
+                <ul class="flex-column gap-12">
+                  <a href="#" class="text-white">Logo</a>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Phone: 015864579
+                  </li>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Fax: 015864579
+                  </li>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Fax: 015864579
+                  </li>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Location: Kathmandu
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="align-center gap-12 text-white py-12 heading">
+                <!-- <i class="fa-solid fa-envelope h6"></i> -->
+                <h6>KNOW US MORE</h6>
+              </div>
+              <div class="info mt-24">
+                <ul class="flex-column gap-12">
+                  <li class="text-cGray300 x-small fw-medium">About Us</li>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Privacy Policy
+                  </li>
+                  <li class="text-cGray300 x-small fw-medium">Return Policy</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="align-center gap-12 text-white py-12 heading">
+                <!-- <i class="fa-solid fa-file-shield h6"></i> -->
+                <h6>YOUR ORDERS</h6>
+              </div>
+              <div class="info mt-24">
+                <ul class="flex-column gap-12">
+                  <li class="text-cGray300 x-small fw-medium">
+                    The Nepal Books Publication
+                  </li>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Thamel Street no 17
+                  </li>
+                  <li class="text-cGray300 x-small fw-medium">
+                    Location: Kathmandu
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="align-center gap-12 text-white py-12 heading">
+                <!-- <i class="fa-solid fa-phone h6"></i> -->
+                <h6>PAYMENT METHOD</h6>
+              </div>
+              <div class="d-flex gap-12 mt-24 flex-wrap">
+                <img
+                  src="../assets/icon/esewa.png"
+                  class="bg-white"
+                  alt=""
+                  width="90px"
+                  height="40px"
+                />
+
+                <img
+                  src="../assets/icon/khalti.png"
+                  alt=""
+                  class="bg-white"
+                  width="90px"
+                  height="40px"
+                />
+                <img
+                  src="../assets/icon/visa.png"
+                  alt=""
+                  class="bg-white"
+                  width="90px"
+                  height="40px"
+                />
+                <img
+                  src="../assets/icon/visa.png"
+                  alt=""
+                  class="bg-white"
+                  width="90px"
+                  height="40px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="copyright bg-primary100 text-center text-white small fw-medium py-8"
+      >
+        &copy;2023 All Rights Reserved
+      </div>
+    </footer>
+
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/index.js"></script>
+  </body>
+</html>

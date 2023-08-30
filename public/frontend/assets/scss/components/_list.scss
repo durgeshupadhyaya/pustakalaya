@@ -1,0 +1,29 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    font-size: 0.875rem;
+  }
+}
+
+.list {
+  &-bullet {
+    li {
+      position: relative;
+      @include flex(center);
+      &:before {
+        margin-right: 0.75rem;
+        content: " ";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $secondary;
+        flex-shrink: 0;
+      }
+      &:not(:last-child) {
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+}

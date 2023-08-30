@@ -1,0 +1,112 @@
+@mixin typography(
+  $font-size: null,
+  $font-weight: null,
+  $color: null,
+  $line-height: null
+) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  line-height: $line-height;
+}
+
+@mixin scrollable($thumb: $blue, $track: $gray-100) {
+  overflow: auto;
+  //padding-right: .5rem;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $track;
+    border-radius: 4px;
+  }
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba($thumb, 0.8);
+    border-radius: 4px;
+    // cursor: pointer;
+  }
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $thumb;
+    cursor: pointer;
+  }
+}
+
+@mixin scrollable($thumb: $blue, $track: $gray-100) {
+  overflow: auto;
+  //padding-right: .5rem;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $track;
+    border-radius: 4px;
+  }
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba($thumb, 0.8);
+    border-radius: 4px;
+    // cursor: pointer;
+  }
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $thumb;
+    cursor: pointer;
+  }
+}
+
+//flex
+@mixin flex($vertical: null, $horizontal: null, $direction: null) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $vertical;
+  justify-content: $horizontal;
+}
+
+//shape
+@mixin shape($shape, $dimension, $color: null) {
+  @if $shape == square {
+    width: $dimension;
+    height: $dimension;
+    background-color: $color;
+    @include flex(center, center);
+  }
+
+  @if $shape == circle {
+    width: $dimension;
+    height: $dimension;
+    background-color: $color;
+    border-radius: 50%;
+    @include flex(center, center);
+  }
+
+  @if $shape == triangle {
+    width: 0;
+    height: 0;
+    border-left: $dimension solid transparent;
+    border-right: $dimension solid transparent;
+    border-bottom: $dimension * 1.5 solid $color;
+  }
+}
+
+//only for rectangle
+@mixin rectangle($width, $height, $color) {
+  width: $width;
+  height: $height;
+  background-color: $color;
+}
+
+//clamp text
+@mixin clamp($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

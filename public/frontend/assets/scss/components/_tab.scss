@@ -1,0 +1,52 @@
+.nav {
+  &-tabs {
+    gap: 1rem;
+    background-color: $white;
+    padding: 0.5rem;
+    border-radius: $default-radius;
+    width: fit-content;
+  }
+  &-pills {
+    background-color: $white;
+    padding: 0.25rem;
+    border-radius: $default-radius;
+    width: fit-content;
+    gap: 0.625rem;
+    &.nav-sm {
+      .nav {
+        &-link {
+          padding: 0.25rem 0.5rem;
+        }
+      }
+    }
+    .nav {
+      &-link {
+        line-height: 120%;
+        border-radius: 0.25rem;
+        &.active {
+          background-color: $primary;
+          color: $white;
+        }
+      }
+    }
+  }
+  &-link {
+    text-transform: capitalize;
+    &.active {
+      .badge {
+        @extend .badge-blue;
+      }
+    }
+  }
+
+  &-underline {
+    .nav-link {
+      padding: 0.5rem 0;
+      line-height: 120%;
+      &.active {
+        background-color: unset;
+        border-bottom: 2px solid $blue-800;
+      }
+    }
+  }
+}

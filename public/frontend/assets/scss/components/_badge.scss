@@ -1,0 +1,38 @@
+//Variables
+$badge-theme: ("blue", "red", "green", "yellow", "gray", "primary");
+
+//Mixins
+@mixin badge($theme, $color) {
+  background-color: $theme;
+  color: $color;
+}
+
+.badge {
+  line-height: $badge-line-height;
+  i {
+    font-size: 1rem;
+  }
+  &-leaf {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem 0;
+  }
+}
+
+@each $label in $badge-theme {
+  .badge-#{$label} {
+    @if $label== "blue" {
+      @include badge($blue-100, $blue-900);
+    } @else if $label== "yellow" {
+      @include badge($yellow-200, $yellow-900);
+    } @else if $label== "red" {
+      @include badge($red-200, $red-900);
+    } @else if $label== "green" {
+      @include badge($green-200, $green-900);
+    } @else if $label== "gray" {
+      @include badge($cool-gray-200, $cool-gray-700);
+    } @else if $label== "primary" {
+      @include badge($primary, $white);
+    }
+  }
+}
