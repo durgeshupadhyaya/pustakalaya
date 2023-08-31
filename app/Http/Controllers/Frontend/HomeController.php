@@ -21,12 +21,11 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $best_sellers = Product::where('status', 1)->inRandomOrder()->limit(12)->get();
-        $new_arrivals = Product::where('status', 1)->inRandomOrder()->limit(12)->latest()->get();
+        $new_arrivals = Product::where('status', 1)->inRandomOrder()->latest()->get();
         $p_category = getParentCategories();
         $sliders = Slider::oldest('order')->get();
         $settings = Setting::pluck('value', 'key');
-        return view('frontend.index', compact('best_sellers', 'new_arrivals', 'p_category', 'sliders'));
+        return view('frontend.index', compact('new_arrivals', 'p_category', 'sliders'));
     }
 
     public function contact()
